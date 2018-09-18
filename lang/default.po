@@ -1,0 +1,211 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: office\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-18 17:30-0800\n"
+"PO-Revision-Date: 2018-11-18 17:30-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:17
+msgid ""
+"Unfortunately, the page you tried accessing could not be retrieved. Please "
+"visit the"
+msgstr ""
+
+#: ../404.php:17
+msgid "homepage"
+msgstr ""
+
+#: ../author.php:25
+msgid "Posts by"
+msgstr ""
+
+#: ../comments.php:18
+msgid "Leave a comment"
+msgstr ""
+
+#: ../comments.php:18 ../content-audio.php:89 ../content-gallery.php:34
+#: ../content-image.php:35 ../content-link.php:35 ../content-video.php:33
+#: ../content.php:34 ../single.php:161
+msgid "1 Comment"
+msgstr ""
+
+#: ../comments.php:18 ../content-audio.php:89 ../content-gallery.php:34
+#: ../content-image.php:35 ../content-link.php:35 ../content-video.php:33
+#: ../content.php:34 ../single.php:161
+msgid "% Comments"
+msgstr ""
+
+#: ../comments.php:18
+msgid "Comments closed"
+msgstr ""
+
+#: ../comments.php:22 ../comments.php:34
+msgid "Comment Navigation"
+msgstr ""
+
+#: ../comments.php:23 ../comments.php:35
+msgid "Older Comments"
+msgstr ""
+
+#: ../comments.php:24 ../comments.php:36
+msgid "Newer Comments"
+msgstr ""
+
+#: ../comments.php:54
+msgid "Name"
+msgstr ""
+
+#: ../comments.php:56
+msgid "Email"
+msgstr ""
+
+#: ../comments.php:58
+msgid "Website"
+msgstr ""
+
+#: ../comments.php:65
+msgid "Leave a reply"
+msgstr ""
+
+#: ../comments.php:67
+msgid "Log In To Comment"
+msgstr ""
+
+#: ../comments.php:71
+msgid "Cancel reply"
+msgstr ""
+
+#: ../comments.php:72
+msgid "Submit Comment"
+msgstr ""
+
+#: ../content-audio.php:89 ../content-gallery.php:34 ../content-image.php:35
+#: ../content-link.php:35 ../content-video.php:33 ../content.php:34
+#: ../single.php:161
+msgid "0 Comments"
+msgstr ""
+
+#: ../footer.php:35
+msgid "Copyright"
+msgstr ""
+
+#: ../functions.php:101
+msgid "Main"
+msgstr ""
+
+#: ../options.php:31
+msgid "General"
+msgstr ""
+
+#: ../options.php:35
+msgid "Custom Logo"
+msgstr ""
+
+#: ../options.php:36
+msgid "Upload your custom logo."
+msgstr ""
+
+#: ../options.php:42
+msgid "Custom Favicon"
+msgstr ""
+
+#: ../options.php:43
+msgid "Upload your custom site favicon."
+msgstr ""
+
+#: ../options.php:48
+msgid "Responsive?"
+msgstr ""
+
+#: ../options.php:49 ../options.php:75
+msgid "Check box to enable the responsive layout."
+msgstr ""
+
+#: ../options.php:59
+msgid "Select"
+msgstr ""
+
+#: ../options.php:64
+msgid "Homepage Soliloquy Slider"
+msgstr ""
+
+#: ../options.php:65
+msgid "Select your homepage Soliloquy Slider."
+msgstr ""
+
+#: ../options.php:74
+msgid "Homepage Subtitle"
+msgstr ""
+
+#: ../options.php:77
+msgid "Welcome To Blog of AJ Clarke"
+msgstr ""
+
+#: ../options.php:84
+msgid "Social"
+msgstr ""
+
+#: ../options.php:89
+msgid "Social?"
+msgstr ""
+
+#: ../options.php:90
+msgid "Check box to enable the social section in the main menu."
+msgstr ""
+
+#: ../options.php:99
+msgid "Enter your "
+msgstr ""
+
+#: ../options.php:99
+msgid " url"
+msgstr ""
+
+#: ../options.php:99
+msgid "Include http:// at the front of the url."
+msgstr ""
+
+#: ../options.php:110
+msgid "About"
+msgstr ""
+
+#: ../options.php:114
+msgid "Theme Credit"
+msgstr ""
+
+#: ../options.php:119
+msgid "Support? Donations?"
+msgstr ""
+
+#: ../options.php:124
+msgid "Newsletter"
+msgstr ""
+
+#: ../options.php:129
+msgid "Advertisement"
+msgstr ""
+
+#: ../search.php:16
+msgid "Search Results For"
+msgstr ""
+
+#: ../search.php:29
+msgid "Sorry, no results where found"
+msgstr ""
+
+#: ../searchform.php:12
+msgid "Type and hit enter to search"
+msgstr ""
+
+#: ../single.php:142
+msgid "View Full-Size"
+msgstr ""

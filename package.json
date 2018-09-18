@@ -1,0 +1,46 @@
+{
+  "name": "wikilovesmonuments",
+  "version": "0.7.1",
+  "description": "Wiki loves Monuments theme npm packages",
+  "keywords": [
+    "theme",
+    "wordpress"
+  ],
+  "homepage": "https://www.wikilovesmonuments.org/",
+  "author": {
+    "name": "Volker E.",
+    "twitter": "@Volker_E"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hatnote/wlm-blog-theme.git"
+  },
+  "private": true,
+  "license": "GPL-3.0",
+  "dependencies": {
+    "normalize.css": "7.0.0",
+    "wikimedia-ui-base": "0.12.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "9.1.5",
+    "cssnano": "4.1.0",
+    "grunt": "1.0.3",
+    "grunt-contrib-less": "2.0.0",
+    "grunt-contrib-watch": "1.1.0",
+    "grunt-exec": "3.0.0",
+    "grunt-eslint": "21.0.0",
+    "grunt-jsonlint": "1.1.0",
+    "grunt-postcss": "0.9.0",
+    "grunt-stylelint": "0.10.1",
+    "grunt-svgmin": "5.0.0",
+    "imagemin": "6.0.0",
+    "imagemin-zopfli": "5.1.0",
+    "pixrem": "4.0.1",
+    "postcss": "7.0.2",
+    "postcss-cssnext": "3.1.0",
+    "postcss-custom-properties": "7.0.0",
+    "postcss-import": "12.0.0",
+    "stylelint": "9.2.0",
+    "stylelint-config-wikimedia": "0.4.3"
+  }
+}

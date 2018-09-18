@@ -1,0 +1,632 @@
+/*!
+Theme Name:		Wiki Loves Monuments 2018
+Version:		0.7.1
+Theme URI:		https://www.wikilovesmonuments.org/
+Author:			Volker E.
+Author URI:		https://temporaer.net/
+Description:	Wiki Loves Monuments 2018 builds on top of current WP Theming best-practices and implements designs by Pau Giner.
+License:        GNU General Public License v3 or later
+License URI:    https://www.gnu.org/licenses/gpl-3.0
+Tags:			fixed-width, flexible-width, one-column, two-columns, three-columns, theme-options, threaded-comments, microformats, translation-ready, light
+*/
+@import 'vendor/wmui-style-guide.dev.css';
+
+/* ::: VARIABLES ::: */
+:root {
+	--wlm-color-primary: var( --color-destructive );
+	--wlm-color-primary--hover: #ff4242; /* ~= `filter: brightness( 120% )` */
+	--wlm-color-primary--active: var( --wmui-color-red30 );
+	--wlm-color-primary--focus: var( --wlm-color-primary );
+
+	--wlm-color-link-light: #a2bef7; /* TODO: not used anywhere yet */
+}
+
+
+/* ::: HTML ELEMENTS ::: */
+body {
+	background-color: var( --background-color-base );
+}
+
+a,
+.lnk {
+	color: var( --wlm-color-primary );
+}
+
+h2 {
+	border-bottom: 0;
+	font-size: 2.2rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+code {
+	background-color: var( --background-color-code );
+	display: inline-block;
+	padding: .2rem .4rem;
+	font-size: 1.4rem;
+}
+
+
+/* ::: GENERAL CLASSES ::: */
+/* Clearfix `.clearfix` extended classes from 'wmui-style-guide.dev.css' */
+.content .content-box:before,
+.content .content-box:after,
+.widget:before,
+.widget:after {
+	content: ' ';
+	display: table;
+}
+
+.content .content-box:after,
+.widget:after {
+	clear: both;
+}
+
+.btn,
+.btn a,
+.nav--main .btn a {
+    background-color: var( --wmui-color-red30 );
+    color: var( --wmui-color-base100 );
+	padding: 1rem 2rem;
+	line-height: 1.5;
+	transition: background-color var( --transition-base );
+}
+
+	.btn:hover,
+	.btn a:hover,
+	.nav--main .btn a:hover {
+		background-color: var( --wmui-color-red50 );
+	    color: var( --wmui-color-base100 );
+	}
+
+
+/* ::: STRUCTURE ::: */
+.header {
+	background-color: var( --wmui-color-base80 ); /* TODO: transform into proper var */
+	position: relative;
+	min-height: 52.8rem;
+	line-height: unset;
+}
+
+	/* Header Mood Image  */
+	.header__mood {
+		background-image: url( https://upload.wikimedia.org/wikipedia/commons/b/b3/Vakil_mosque_Panorama.jpg ); /* TODO: local URI */
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 40rem;
+	}
+
+	.header__mood .content-box {
+		height: 100%;
+	}
+
+	.site__title {
+		color: var( --wmui-color-base100 );
+		background-color: rgba( 34, 34, 34, .75 ); /* TODO: make variable */
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 9.6rem;
+		padding: 1.2rem 2.4rem 1.6rem;
+		font-family: var( --font-family-serif--fallback );
+		font-size: 1.3rem;
+		font-weight: var( --font-weight-ultralight );
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+		.site__title a {
+			background-image: url( img/wlm-logo-full-light.svg );
+			background-size: 241px 65px;
+			background-repeat: no-repeat;
+			color: inherit;
+			display: block;
+			width: 24.1rem;
+			height: 6.5rem;
+			padding: 0;
+			/* line-height: 64px; */
+			text-indent: -9999em;
+			overflow-x: hidden;
+		}
+
+	/* Main Navigation */
+	.nav--main {
+		background: none;
+		width: 100%;
+		position: absolute;
+		bottom: 2.4rem;
+	}
+
+	.nav--main h2 {
+		max-width: 42%;
+		margin: 0;
+		padding: 0;
+		font-weight: var( --font-weight-ultralight );
+		font-size: 2rem;
+	}
+
+	.nav--main li {
+		display: inline-block;
+	}
+
+	.nav--main a {
+		color: var( --wlm-color-primary );
+		padding: 0;
+	}
+
+		.nav--main a:hover {
+			background-color: transparent;
+			color: var( --wlm-color-primary--hover );
+		}
+
+	.nav--main .btn--join,
+	.lnk--organize {
+		display: block;
+		position: absolute;
+		right: 0;
+	}
+
+	.nav--main .btn--join {
+		margin-right: .8rem;
+		top: 0;
+		font-size: 2rem;
+	}
+
+	.lnk--organize span {
+		color: var( --color-base );
+	}
+
+
+/* ... Content ... */
+.content {
+	float: none;
+	width: 100%;
+}
+
+
+/* ... Stories ... */
+.story {
+	font-size: 110%;
+}
+
+	.story__title {
+		background-color: rgba( 34, 34, 34, .75 ); /* TODO: var */
+		color: var( --wmui-color-base100 );
+		height: 8.4rem;
+		font-family: var( --font-family-serif--fallback );
+		font-size: 1.3rem;
+		font-weight: var( --font-weight-ultralight );
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	.story__thumb {
+		float: left;
+		width: 100px;
+		height: 150px;
+		overflow: hidden;
+		margin-right: 2rem;
+	}
+
+	.story__thumb img {
+		margin: 0;
+		min-width: 100%;
+		min-height: 100%;
+	}
+
+	.entry__title {
+		border-bottom: 0;
+	}
+
+	.entry__meta {
+		padding: 0;
+	}
+
+	.entry__meta li {
+		list-style: none none;
+	}
+
+	.entry__meta li:first-child {
+		float: right;
+	}
+
+	.story__headline a,
+	.entry__title a {
+		color: var( --color-base );
+	}
+
+	.story section {
+		position: relative;
+		min-height: 150px;
+		margin-right: 2rem;
+	}
+
+	.story section h2,
+	.story section p {
+		padding-left: 120px;
+	}
+
+	.story__byline {
+		/*position: absolute;*/
+		bottom: 0;
+		right: 0;
+	}
+
+	.lnk--back {
+		color: var( --wmui-color-red30 );
+		font-size: 120%;
+		font-weight: var( --font-weight-bold );
+	}
+
+.inner-post {
+	margin-top: 5rem;
+	border-top: 10px solid var( --wmui-color-base80 );
+}
+
+
+/* ... Gallery ... */
+.gallery {
+	color: var( --wmui-color-base100 );
+	background: var( --wmui-color-base10 );
+	padding-bottom: 4rem;
+}
+
+.gallery .content {
+	padding-bottom: 3.2rem;
+	border-bottom: 1px solid var( --wmui-color-base100 );
+}
+
+.gallery img {
+	width: 100%;
+}
+
+.gallery__name {
+	margin-top: 3.75rem;
+	font-weight: normal;
+}
+
+.gallery__name a {
+	color: var( --wmui-color-base100 );
+}
+
+.gallery__caption {
+	background: var( --wmui-color-base80 );
+	color: var( --wmui-color-base10 );
+}
+
+.gallery__info {
+	font-weight: var( --font-weight-ultralight );
+	text-align: center;
+}
+.gallery__desc {
+	font-weight: var( --font-weight-ultralight );
+	font-size: 90%;
+}
+
+.gallery__nav_arrow {
+    text-align: center;
+    width: 25%;
+    font-size: 250%;
+    display: inline-block;
+    color: var( --wmui-color-base100 );
+}
+
+.gallery__nav_arrow:hover{
+	text-decoration: none;
+	background-color: var( --wmui-color-accent50 );
+}
+
+.page__gallery h1 {
+	margin-top: 0;
+}
+
+.page__gallery {
+	font-size: 0;
+}
+
+.page__gallery a {
+	font-size: 16px;
+	display: inline-block;
+	margin-bottom: 8px;
+	width: calc( 50% - 4px );
+	margin-right: 8px;
+	overflow: hidden;
+}
+
+.page__gallery a:nth-of-type( 2n ) {
+	margin-right: 0;
+}
+
+.gallery__thumb {
+	width: 100%;
+}
+
+.btn--more {
+	color: var( --wmui-color-red30 );
+	font-weight: var( --font-weight-bold );
+}
+
+
+.more {
+	margin-top: 5rem;
+	border-top: 10px solid var( --wmui-color-base80 );
+}
+
+.more__title {
+	margin: 2.5rem 0;
+}
+
+.more-story {
+	min-height: 150px;
+}
+
+.more-story__thumb {
+	float: left;
+	width: 100px;
+	height: 150px;
+	overflow: hidden;
+	margin-right: 2rem;
+}
+
+.more-story__thumb img {
+	margin: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.more-story__headline {
+	margin: 0;
+}
+
+.more-story__headline a {
+	color: var( --color-base );
+}
+
+.more-story__summary {
+	margin-right: 2rem;
+	font-size: 80%;
+}
+
+/* ... Sidebar ... */
+.widget {
+	margin-top: 3.2rem;
+}
+
+.widget__title {
+	margin-top: 0;
+	font-weight: var( --font-weight-ultralight );
+}
+
+/* stylelint-disable selector-max-id */
+.widget #subscribe-email input {
+	width: 100%;
+	border: var( --border-width-base ) var( --border-style-base ) #a2a9b1; /* TODO */
+	padding: .2rem .4rem;
+}
+
+#subscribe-submit input {
+    background-color: var( --background-color-base );
+    color: var( --wmui-color-red30 );
+    float: right;
+    border: 1px solid var( --wmui-color-red50 );
+	padding: .2rem 1.6rem;
+	transition: background-color var( --transition-base );
+}
+/* stylelint-enable selector-max-id */
+
+/* ... Footer ... */
+.footer {
+	background-image: url( img/wlm-compact-dark.svg );
+	background-position: center top;
+	background-repeat: no-repeat;
+	clear: both;
+	margin-top: 4.8rem;
+	padding-top: 3.2rem;
+}
+
+/* 'Partners' widget */
+.partners {
+	margin-bottom: 3.2rem;
+}
+
+.partners li {
+	list-style: none none;
+	display: inline-block;
+	margin-right: 1.6rem;
+	vertical-align: middle;
+}
+
+/* Footer links and license */
+.footer .widget_custom_html + .widget_custom_html .widget__title {
+	display: none;
+}
+
+.footer__list li {
+	float: left;
+	margin-left: 2.4rem;
+	padding: 0;
+}
+
+.footer__list li:first-child {
+	list-style: none none;
+	margin-left: 0;
+}
+
+
+/* ::: MEDIA QUERIES ::: */
+/* ... Smartphone only ... */
+@media ( max-width: 767px ) {
+	.header {
+		/* TODO: needs some JS love
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		*/
+	}
+}
+
+/* ... Smartphone portrait ... */
+@media ( min-width: var( --width-breakpoint-mobile ) ) {
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.8rem;
+	}
+
+	.content-box {
+		transition: padding var( --transition-medium );
+	}
+
+	.site__title {
+		text-align: center;
+	}
+
+	.site__title a {
+		padding-right: 3.2rem;
+	}
+
+	.site__logo {
+		opacity: 0;
+		transition: opacity var( --transition-medium );
+	}
+
+	.nav--main a {
+		padding-left: 1.6rem;
+		padding-right: 1.6rem;
+	}
+
+	,
+	.nav--main .btn--join,
+	.lnk--organize {
+		margin-right: 1.6rem;
+	}
+
+	.col--main,
+	.col--aside {
+		width: 100%;
+	}
+
+	figure {
+		margin-left: -1.6rem;
+		margin-right: -1.6rem;
+	}
+}
+
+/* ... Smartphone+ portrait ... */
+@media ( min-width: 414px ) {
+	.content-box {
+		padding-left: 3.2rem;
+		padding-right: 3.2rem;
+	}
+
+	.site__logo {
+		opacity: 1;
+	}
+
+	.site__title a {
+		padding-right: 0;
+	}
+
+	.nav--main .btn--join,
+	.lnk--organize {
+		margin-right: 3.2rem;
+	}
+
+	figure {
+		margin-left: -3.2rem;
+		margin-right: -3.2rem;
+	}
+}
+
+/* ... Smartphone landscape ... */
+@media ( min-width: 568px ) {
+	.header__attribution span {
+		display: inline;
+		opacity: 0;
+		transition: opacity var( --transition-medium );
+	}
+}
+
+/* ... Tablet ... */
+@media ( min-width: 768px ) {
+	.content-box {
+		max-width: 960px;
+	}
+
+	.btn--nav-main {
+		display: none;
+	}
+
+	.site__title {
+		float: left;
+		text-align: left;
+	}
+
+	.header__attribution {
+		background-color: rgba( 234, 236, 240, .6 ); /* var( --wmui-color-base80 ) */
+		max-width: 40%;
+		position: absolute;
+		bottom: .8rem;
+		right: 0;
+		margin: 0;
+		padding: .8rem 2.4rem;
+		text-align: right;
+	}
+
+	/* Content */
+	.col {
+		float: left;
+	}
+
+	.col--main {
+		width: 33.33333333%;
+		padding-right: 1.6rem;
+	}
+
+	.col--aside {
+		width: 66.66666667%;
+		padding-left: 1.6rem;
+	}
+
+	figure {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+/* ... Tablet+ / Netbook ... */
+@media ( min-width: 992px ) {
+	.content-box {
+		width: 960px;
+		max-width: none;
+	}
+
+	.col--half {
+		width: 50%;
+	}
+
+	/* Homepage */
+	.col--main {
+		width: 60%;
+	}
+
+	.col--aside {
+		width: 40%;
+	}
+
+	.navigation-box {
+		height: 13.6rem;
+	}
+}
+
+@media ( min-width: var( --width-breakpoint-desktop-wide ) ) {
+	.content-box {
+		width: 1140px;
+	}
+}
