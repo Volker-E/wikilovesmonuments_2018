@@ -53,8 +53,8 @@ code {
 /* Clearfix `.clearfix` extended classes from 'wmui-style-guide.dev.css' */
 .content .content-box:before,
 .content .content-box:after,
-.entry:before,
-.entry:after,
+.entry__meta:before,
+.entry__meta:after,
 .widget:before,
 .widget:after {
 	content: ' ';
@@ -62,7 +62,7 @@ code {
 }
 
 .content .content-box:after,
-.entry:after,
+.entry__meta:after,
 .widget:after {
 	clear: both;
 }
@@ -242,6 +242,7 @@ article:first-child {
 
 	.entry__meta {
 		padding: 0;
+		font-size: 1.3rem;
 	}
 
 	.entry__meta li {
@@ -252,9 +253,14 @@ article:first-child {
 		float: right;
 	}
 
-	.story__headline a,
 	.entry__title a {
 		color: var( --color-base );
+		transition: color var( --transition-base );
+	}
+
+	.entry__title a:hover {
+		color: var( --wlm-color-primary );
+		text-decoration: none;
 	}
 
 	.story section {
@@ -459,14 +465,23 @@ article:first-child {
 	vertical-align: middle;
 }
 
+.partners li a img {
+	filter: grayscale( 100% );
+	opacity: .8;
+	transition: filter var( --transition-ease-medium ), opacity var( --transition-ease-medium );
+}
+
+.partners li a:hover img {
+	filter: grayscale( 0 );
+	opacity: 1;
+}
+
 /* Footer links and license */
 .footer .widget_custom_html + .widget_custom_html .widget__title {
 	display: none;
 }
 
 .footer__list li {
-	float: left;
-	margin-left: 2.4rem;
 	padding: 0;
 }
 
