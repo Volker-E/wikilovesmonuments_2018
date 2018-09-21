@@ -32,6 +32,14 @@ a,
 	color: var( --wlm-color-primary );
 }
 
+article {
+	margin-top: 3.2rem;
+}
+
+article:first-child {
+	margin-top: 0;
+}
+
 h2 {
 	border-bottom: 0;
 	font-size: 2.2rem;
@@ -46,6 +54,15 @@ code {
 	display: inline-block;
 	padding: .2rem .4rem;
 	font-size: 1.4rem;
+}
+
+figcaption,
+.wp-caption-text { /* TODO: rename class to `.figure__caption` with functions.php function */
+	color: var( --color-base--subtle );
+	display: block;
+	margin-top: .8rem;
+	font-size: 1.3rem;
+	font-style: italic;
 }
 
 
@@ -206,14 +223,6 @@ code {
 
 
 /* ... Stories ... */
-article {
-	margin-top: 3.2rem;
-}
-
-article:first-child {
-	margin-top: 0;
-}
-
 .story {
 	font-size: 110%;
 }
@@ -256,7 +265,8 @@ article:first-child {
 		list-style: none none;
 	}
 
-	.entry__meta li:first-child {
+	/* Only on listings, not on `.single` pages */
+	.blog .entry__meta li:first-child {
 		float: right;
 	}
 
@@ -293,9 +303,11 @@ article:first-child {
 		font-weight: var( --font-weight-bold );
 	}
 
-.inner-post {
-	margin-top: 5rem;
-	border-top: 10px solid var( --wmui-color-base80 );
+.entry figure,
+.entry figure img,
+.entry > img {
+	max-width: 100%;
+	height: auto;
 }
 
 
