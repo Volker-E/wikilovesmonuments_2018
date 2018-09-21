@@ -18,22 +18,22 @@
 get_header(); ?>
 
 <?php
+// Start the Loop.
 if ( have_posts() ) { ?>
 	<div class="col col--main">
 	<?php
-	/* Start the Loop */
 	while ( have_posts() ) {
 		the_post();
 		get_template_part( 'content', get_post_format() );
 	}
 	?>
 	</div>
-	<?php //post_navigation(); TODO ?>
+	<?php // post_navigation(); TODO ?>
 <?php
 } else { ?>
 		<h2><?php _e( 'Nothing Found', 'wikilovesmonuments' ); ?></h2>
 <?php
-wp_link_pages(); // Paginate pages when <!- next --> is used.
+	wp_link_pages(); // Paginate pages when <!- next --> is used.
 }
 ?>
 <?php
