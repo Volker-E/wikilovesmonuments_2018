@@ -84,6 +84,10 @@ code {
 	    color: var( --wmui-color-base100 );
 	}
 
+.emoji {
+	max-width: 2.4rem;
+	max-height: 2.4rem;
+}
 
 /* ::: STRUCTURE ::: */
 .header {
