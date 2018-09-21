@@ -88,6 +88,9 @@ code {
 /* ::: STRUCTURE ::: */
 .header {
 	background-color: var( --wmui-color-base80 ); /* TODO: transform into proper var */
+	background-image: linear-gradient( to bottom, var( --wmui-color-base10 ), var( --wmui-color-base10 ) 40rem, var( --wmui-color-base80 ) 40rem, var( --wmui-color-base80 ) ), url( img/wlm-logo-compact-light.svg );
+	background-repeat: no-repeat;
+	background-position: 0 0, center 20rem;
 	position: relative;
 	min-height: 52.8rem;
 	line-height: unset;
