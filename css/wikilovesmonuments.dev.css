@@ -140,7 +140,7 @@ code {
 		background: none;
 		width: 100%;
 		position: absolute;
-		bottom: 2.4rem;
+		bottom: 1.6rem;
 	}
 
 	.nav--main h2 {
@@ -656,7 +656,7 @@ article:first-child {
 	}
 
 	.navigation-box {
-		height: 13.6rem;
+		height: 12.8rem;
 	}
 }
 
