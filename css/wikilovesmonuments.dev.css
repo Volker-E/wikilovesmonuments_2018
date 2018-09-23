@@ -65,6 +65,49 @@ figcaption,
 	font-style: italic;
 }
 
+/* ... Form elements ... */
+button,
+[ type='button' ],
+[ type='submit' ] { /* `reset` is currnently not used */
+	padding: .6rem 1.6rem;
+	transition: background-color var( --transition-base );
+	font-family: inherit;
+}
+
+	button:not( :disabled ),
+	[ type='button' ]:not( :disabled ),
+	[ type='submit' ]:not( :disabled ) {
+		cursor: pointer;
+	}
+
+textarea,
+[ type='text' ],
+[ type='search' ],
+[ type='email' ] { /* `password`, `tel` & `url` are currently not used. */
+	color: var( --color-base--emphasized );
+	border: var( --border-base );
+	border-radius: var( --border-radius-base );
+	padding: .6rem .8rem;
+	box-shadow: inset 0 0 0 1px transparent;
+	font-family: inherit;
+	transition: border-color var( --transition-ease-medium ), box-shadow var( --transition-ease-medium );
+}
+
+	textarea:hover,
+	[ type='text' ]:hover,
+	[ type='search' ]:hover,
+	[ type='email' ]:hover {
+		border-color: var( --border-color--hover );
+	}
+
+	textarea:focus,
+	[ type='text' ]:focus,
+	[ type='search' ]:focus,
+	[ type='email' ]:focus {
+		border-color: var( --border-color--focus );
+		box-shadow: var( --box-shadow-base--focus );
+	}
+
 
 /* ::: GENERAL CLASSES ::: */
 /* Clearfix `.clearfix` extended classes from 'wmui-style-guide.dev.css' */
@@ -444,22 +487,27 @@ figcaption,
 	font-weight: var( --font-weight-ultralight );
 }
 
+/* Widget 'Subscribe to Blog' */
 /* stylelint-disable selector-max-id */
-.widget #subscribe-email input {
-	width: 100%;
-	border: var( --border-width-base ) var( --border-style-base ) #a2a9b1; /* TODO */
-	padding: .2rem .4rem;
+#subscribe-email {
+	margin-top: .8rem;
 }
 
-#subscribe-submit input {
+#subscribe-email [ type='email' ] {
+	width: 100%;
+}
+/* stylelint-enable selector-max-id */
+
+.jetpack_subscription_widget [ type='submit' ] {
     background-color: var( --background-color-base );
     color: var( --wmui-color-red30 );
     float: right;
     border: 1px solid var( --wmui-color-red50 );
-	padding: .2rem 1.6rem;
-	transition: background-color var( --transition-base );
 }
-/* stylelint-enable selector-max-id */
+	.jetpack_subscription_widget [ type='submit' ]:hover {
+		background-color: var( --background-color-destructive );
+	}
+
 
 /* ... Footer ... */
 .footer {
