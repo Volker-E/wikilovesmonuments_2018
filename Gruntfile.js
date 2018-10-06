@@ -2,40 +2,50 @@
  * Grunt file
  */
 
-/*jshint node:true */
 module.exports = function ( grunt ) {
+	/*
+	 * PostCSS processors
+	 */
+	// Without minifier
+	var postCssProcessorsDev = [
+			require( 'postcss-import' )( {
+				from: 'css/wiklovesmonuments.dev.css'
+			} ),
+			require( 'postcss-custom-properties' )( {
+				preserve: false
+			} ),
+			require( 'autoprefixer' )( {
+				browsers: [
+					'Android >= 2.3',
+					'Chrome >= 10',
+					'Edge >= 12',
+					'Firefox >= 3.6',
+					'IE >= 8',
+					'IE_mob 11',
+					'iOS >= 5.1',
+					'Opera >= 12.5',
+					'Safari >= 5.1'
+				]
+			} )
+		],
+		// With minifier
+		postCssProcessorsMin = postCssProcessorsDev.concat( [ require( 'cssnano' )() ] );
+
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-contrib-less' );
+	grunt.loadNpmTasks( 'grunt-eslint' );
 	grunt.loadNpmTasks( 'grunt-postcss' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
 
-	// PostCSS processors without minifier
-	var postCssProcessorsDev = [
-		require( 'postcss-import' )( {
-			from: 'css/wiklovesmonuments.dev.css'
-		} ),
-		require( 'postcss-custom-properties' )( {
-			preserve: false
-		} ),
-		require( 'autoprefixer' )( {
-			browsers: [
-				'Android >= 2.3',
-				'Chrome >= 10',
-				'Edge >= 12',
-				'Firefox >= 3.6',
-				'IE >= 8',
-				'IE_mob 11',
-				'iOS >= 5.1',
-				'Opera >= 12.5',
-				'Safari >= 5.1'
-			]
-		} )
-	];
-
-	// PostCSS processors with minifier
-	var postCssProcessorsMin = postCssProcessorsDev.concat( [ require( 'cssnano' )() ] );
-
 	grunt.initConfig( {
+		// Lint – JavaScript
+		eslint: {
+			dev: [
+				'Gruntfile.js',
+				'!js/vendor/**/*.js'
+			]
+		},
+
 		// Lint – Stylesheets
 		stylelint: {
 			src: [
