@@ -68,20 +68,6 @@ module.exports = function ( grunt ) {
 			}
 		},
 
-		/* CSSMin
-		cssmin: {
-			options: {
-				shorthandCompacting: true,
-				roundingPrecision: -1
-			},
-			target: {
-				files: {
-				  'css/wlm-blog.min.css': 'css/wlm-blog.css'
-				}
-			}
-		},
-		*/
-
 		// Development
 		watch: {
 			files: [
