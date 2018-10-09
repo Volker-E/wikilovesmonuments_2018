@@ -132,6 +132,7 @@ textarea,
 .nav--main .btn a {
     background-color: var( --wmui-color-red30 );
     color: var( --wmui-color-base100 );
+    border-radius: var( --border-radius-base );
 	padding: 1rem 2rem;
 	line-height: 1.5;
 	transition: background-color var( --transition-base );
@@ -503,6 +504,7 @@ textarea,
     color: var( --wmui-color-red30 );
     float: right;
     border: 1px solid var( --wmui-color-red50 );
+    border-radius: var( --border-radius-base );
 }
 	.jetpack_subscription_widget [ type='submit' ]:hover {
 		background-color: var( --background-color-destructive );
@@ -677,6 +679,7 @@ textarea,
 		bottom: .8rem;
 		right: 0;
 		margin: 0;
+		border-radius: var( --border-radius-base );
 		padding: .8rem 2.4rem;
 		text-align: right;
 	}
