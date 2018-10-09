@@ -68,7 +68,7 @@ figcaption,
 /* ... Form elements ... */
 button,
 [ type='button' ],
-[ type='submit' ] { /* `reset` is currnently not used */
+[ type='submit' ] { /* `reset` is currently not used */
 	padding: .6rem 1.6rem;
 	transition: background-color var( --transition-base );
 	font-family: inherit;
