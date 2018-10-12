@@ -8,6 +8,13 @@
  * @version 0.7.0
  */
 ?>
-<form method="get" id="searchbar" action="<?php echo home_url( '/' ); ?>">
-	<input type="search" name="s" value="<?php _e( 'Type and hit enter to search', 'wikilovesmonuments' ); ?>" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
+
+<?php $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
+
+<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+	<label for="<?php echo $unique_id; ?>">
+		<span class="screen-reader-text"><?php echo _x( 'Search for:', 'label', 'wikilovesmonuments' ); ?></span>
+	</label>
+	<input type="search" id="<?php echo $unique_id; ?>" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'wikilovesmonuments' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+	<button type="submit" class="search-submit"><?php echo _x( 'Search', 'submit button', 'wikilovesmonuments' ); ?></button>
 </form>
