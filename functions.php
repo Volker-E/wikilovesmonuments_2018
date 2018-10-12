@@ -52,7 +52,7 @@ function wikilovemonuments_scripts() {
 	wp_enqueue_script( 'html5shiv', get_theme_file_uri( '/js/html5shiv-3.7.3.min.js' ), array(), '3.7.3' );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
-	// Comment replies
+	// Comment reply.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

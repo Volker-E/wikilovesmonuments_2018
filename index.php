@@ -41,5 +41,4 @@ if ( is_front_page() ) {
 	get_sidebar();
 }
 ?>
-
 <?php get_footer(); ?>
