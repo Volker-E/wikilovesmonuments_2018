@@ -8,8 +8,10 @@
  * @version 0.7.0
  */
 
-// Start loop
-while ( have_posts() ) : the_post(); ?>
+// Start the Loop.
+while ( have_posts() ) {
+	the_post();
+?>
 <article <?php post_class( 'search-entry' ); ?>>
 	<?php
 	// Get full URL to image.
@@ -36,10 +38,12 @@ while ( have_posts() ) : the_post(); ?>
 			$excerpt = !empty( $post->post_excerpt ) ? get_the_excerpt() : wp_trim_words($content_stripped, 40 );
 			echo $excerpt; ?>
 		</p>
-		<?php if ( $featured_image ) {  ?>
+		<?php
+		if ( $featured_image ) {  ?>
 		</div>
-		<?php } // Featured image not set ?>
+		<?php } ?>
 </article>
 <?php
-// End loop
-endwhile; ?>
+// End the Loop.
+}
+?>
