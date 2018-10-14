@@ -561,6 +561,19 @@ textarea,
 
 
 /* ::: MEDIA QUERIES ::: */
+/* ... Feature queries ... */
+@media not all and ( pointer: fine ), ( pointer: fine ) {
+	.header__attribution {
+		opacity: 0;
+		transition: opacity var( --transition-ease-out-medium );
+	}
+
+	.header__mood:hover .header__attribution {
+		opacity: 1;
+	}
+
+}
+
 /* ... Smartphone only ... */
 @media ( max-width: 767px ) {
 	.header {
