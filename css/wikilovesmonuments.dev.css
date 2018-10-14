@@ -226,6 +226,8 @@ textarea,
 	.nav--main a {
 		color: var( --wlm-color-primary );
 		padding: 0;
+		transition: all var( --transition-medium );
+		transition-property: color, padding;
 	}
 
 		.nav--main a:hover {
