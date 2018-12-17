@@ -48,7 +48,7 @@
 		</div>
 		<div class="content-box navigation-box">
 			<nav id="navigation" class="nav nav--main" role="navigation">
-				<h2><?php _e( 'Contribute images of local monuments to Wikipedia, and win prizes', 'wikilovesmonuments' ); ?></h2>
+				<h2><?php _e( 'Wikipedia photo contest with 250,000+ images of the world\'s monuments contributed in 2018', 'wikilovesmonuments' ); ?></h2>
 				<?php wp_nav_menu( array(
 					'container'      => false,
 					'theme_location' => 'main_menu',
