@@ -176,7 +176,7 @@ textarea,
 
 	.site__title {
 		color: var( --wmui-color-base100 );
-		background-color: rgba( 34, 34, 34, .75 ); /* TODO: make variable */
+		background-color: rgba( 34, 34, 34, .5 ); /* TODO: make variable */
 		position: absolute;
 		left: 0;
 		bottom: 0;
@@ -698,7 +698,7 @@ textarea,
 	}
 
 	.header__attribution {
-		background-color: rgba( 234, 236, 240, .6 ); /* var( --wmui-color-base80 ) */
+		background-color: rgba( 234, 236, 240, .5 ); /* var( --wmui-color-base80 ) */
 		max-width: 40%;
 		position: absolute;
 		bottom: 1rem;
