@@ -45,6 +45,10 @@ h3 {
 	font-size: 2rem;
 }
 
+h4 {
+	font-weight: 100;
+}
+
 code {
 	background-color: var( --background-color-code );
 	display: inline-block;
